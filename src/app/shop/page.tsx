@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { Product } from '../../../types/products';
-import { allProducts, four } from "@/sanity/lib/queries";
+import { allProducts } from "@/sanity/lib/queries";  // Removed 'four' import
 import { urlFor } from "@/sanity/lib/image";
 import { client } from "@/sanity/lib/client";
 import Header from "../components/header";
@@ -105,4 +105,5 @@ const Shop = () => {
 };
 
 export default Shop;
+
 
