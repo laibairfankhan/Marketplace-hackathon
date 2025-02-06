@@ -75,16 +75,16 @@ const Shop = () => {
         ) : products && products.length > 0 ? (
           products.map((product) => (
             <div key={product._id} className="flex flex-col items-center text-center p-4 border rounded-lg shadow-md">
-              {product.image && (
+              {product._image && (
                 <Image
-                  src={urlFor(product.image).url()} // Use product.image here
-                  alt={product.name} // Display the product name as alt text
+                  src={urlFor(product._image).url()} // Use product.image here
+                  alt={product.productName} // Display the product name as alt text
                   width={250}
                   height={250}
                   className="rounded-lg object-cover"
                 />
               )}
-              <h3 className="text-lg font-semibold mt-2">{product.name}</h3>
+              <h3 className="text-lg font-semibold mt-2">{product.productName}</h3>
               <p className="text-gray-700 text-md font-medium">Rs. {product.price}</p>
             </div>
           ))
