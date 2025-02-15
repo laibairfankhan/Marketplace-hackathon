@@ -13,7 +13,7 @@
 //      description? : string;
 // }
 
-export interface Product {
+interface Product {
     _id: string;
     productName: string;
     _type: "product";
@@ -26,3 +26,4 @@ export interface Product {
     price: number;
     description?: string;
 }
+export default Product;
